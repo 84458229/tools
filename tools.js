@@ -1367,7 +1367,7 @@ module.exports = tools;
 
         //设置设备的独立像素比api
         targetDensitydpi = 750 / deviceWidth * devicePixelRatio * 160;
-        创建meta标签
+        //创建meta标签
         initialContent = isiOS
             ? 'width=' + 750 + 'px, user-scalable=no, minimal-ui'
             : 'target-densitydpi=' + targetDensitydpi + ', width=' + 750 + ', user-scalable=no';
@@ -1456,8 +1456,8 @@ module.exports = tools;
     }
     function refreshRem() {
         var width = docEl.getBoundingClientRect().width;
-        if (width / dpr > 540) {
-            width = 540 * dpr;
+        if (width / dpr > 750) {
+            width = 750 * dpr;
         }
         var rem = width / 10;
         docEl.style.fontSize = rem + 'px';
